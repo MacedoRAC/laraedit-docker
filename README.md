@@ -5,11 +5,11 @@ Dockerized version of Laravel Homestead
 For now you can [check out the wiki](https://github.com/laraedit/laraedit-docker/wiki) for details on using the container. Once the container is stable, I will add more instructions here in the readme.
 
 # Build Information
-You can find the latest build details on the [Docker Hub](https://hub.docker.com/r/laraedit/laraedit/)
+You can find the latest build details on the [Docker Hub](https://hub.docker.com/r/macedo/laraedit-docker-php56/)
 
 # What works
 - [x] Nginx 1.8.1
-- [x] PHP 7.0
+- [x] PHP 5.6
 - [x] SQLite
 - [x] MySQL 5.7
 - [x] Redis
@@ -33,14 +33,12 @@ You can find the latest build details on the [Docker Hub](https://hub.docker.com
 ### CLI (the other easy way)
   1. Pull in the image
   ```
-    docker pull laraedit/laraedit
+    docker pull macedo/laraedit-docker-php56
   ```  
   2. Run the container
   ```
-    docker run -p 80:80 -v /path/to/your/app:/var/www/html/app laraedit/laraedit
+    docker run -p 80:80 -v /path/to/your/app:/var/www/html/app macedo/laraedit-docker-php56
   ```
-  
-**If you want to try the latest unstable release, replace `laraedit/laraedit` with `laraedit/laraedit:dev`**
 
 # MySQL Details
 
