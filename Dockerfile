@@ -19,7 +19,6 @@ RUN apt-get install -y software-properties-common curl build-essential \
 
 # add some repositories
 RUN apt-add-repository ppa:nginx/stable -y && \
-    apt-add-repository ppa:rwky/redis -y && \
     apt-add-repository ppa:ondrej/php -y && \
     apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys 5072E1F5 && \
     sh -c 'echo "deb http://repo.mysql.com/apt/ubuntu/ trusty mysql-5.7" >> /etc/apt/sources.list.d/mysql.list' && \
@@ -105,7 +104,7 @@ RUN /usr/bin/npm install -g gulp
 RUN /usr/bin/npm install -g bower
 
 # install redis 
-RUN apt-get install -y redis-server
+#RUN apt-get install -y redis-server
 
 # install blackfire
 RUN apt-get install -y blackfire-agent blackfire-php
